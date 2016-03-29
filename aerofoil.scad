@@ -135,7 +135,7 @@ module mid_wing_ribs()
     {
         all_wing_ribs();
         
-        translate([300, -400, -50])
+        translate([290, -400, -50])
             cube([400, 400, 100]);
         
         translate([0, -400, -50])
@@ -143,16 +143,34 @@ module mid_wing_ribs()
     }
 }
 
-module outbd_wing_ribs()
+module outbd_fwd_wing_ribs()
 {
     difference()
     {
         all_wing_ribs();
         
         translate([0, -400, -50])
-            cube([300, 400, 100]);
+            cube([280, 400, 100]);
+        
+        translate([0, -400, -50])
+            cube([1000, 200, 100]);
     }
 }
+
+module outbd_aft_wing_ribs()
+{
+    difference()
+    {
+        all_wing_ribs();
+        
+        translate([0, -400, -50])
+            cube([280, 400, 100]);
+        
+        translate([0, -200, -50])
+            cube([1000, 200, 100]);
+    }
+}
+
 
 module inbd_elevon_ribs()
 {
